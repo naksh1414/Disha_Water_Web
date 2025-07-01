@@ -1,83 +1,121 @@
 import { Calendar, MapPin, Users, Droplets } from 'lucide-react';
 import Card from '../Common/Card';
 import { useState } from 'react';
+import Header from '../Common/Header';
 const PreviousWorks = () => {
   const [activeFilter, setActiveFilter] = useState('all');
 
-  const projects = [
-    {
-      id: 1,
-      title: 'Municipal Water Treatment Plant - Springfield',
-      category: 'municipal',
-      image: 'https://images.pexels.com/photos/247851/pexels-photo-247851.jpeg?auto=compress&cs=tinysrgb&w=800',
-      description: 'Large-scale water treatment facility serving 250,000 residents with advanced filtration and purification systems.',
-      client: 'Springfield City Council',
-      location: 'Springfield, USA',
-      date: '2023',
-      capacity: '50 million gallons/day',
-      features: ['Multi-stage filtration', 'UV disinfection', 'Automated monitoring', 'Energy-efficient design']
-    },
-    {
-      id: 2,
-      title: 'Industrial Wastewater Treatment - TechCorp',
-      category: 'industrial',
-      image: 'https://images.pexels.com/photos/433198/pexels-photo-433198.jpeg?auto=compress&cs=tinysrgb&w=800',
-      description: 'Custom wastewater treatment solution for a major manufacturing facility with zero liquid discharge.',
-      client: 'TechCorp Manufacturing',
-      location: 'Detroit, USA',
-      date: '2023',
-      capacity: '2 million gallons/day',
-      features: ['Chemical treatment', 'Biological processing', 'Water recycling', 'Sludge management']
-    },
-    {
-      id: 3,
-      title: 'Residential Complex Water System - Green Valley',
-      category: 'residential',
-      image: 'https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?auto=compress&cs=tinysrgb&w=800',
-      description: 'Complete water treatment and distribution system for a 500-unit residential development.',
-      client: 'Green Valley Developers',
-      location: 'Austin, USA',
-      date: '2022',
-      capacity: '1 million gallons/day',
-      features: ['Centralized filtration', 'Smart metering', 'Pressure management', 'Quality monitoring']
-    },
-    {
-      id: 4,
-      title: 'Hospital Water Purification System',
-      category: 'commercial',
-      image: 'https://images.pexels.com/photos/416528/pexels-photo-416528.jpeg?auto=compress&cs=tinysrgb&w=800',
-      description: 'High-purity water system for critical medical applications including dialysis and laboratory use.',
-      client: 'Regional Medical Center',
-      location: 'Phoenix, USA',
-      date: '2022',
-      capacity: '500,000 gallons/day',
-      features: ['Ultra-pure water', 'Redundant systems', 'Real-time monitoring', 'Compliance tracking']
-    },
-    {
-      id: 5,
-      title: 'Food Processing Plant Water Treatment',
-      category: 'industrial',
-      image: 'https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=800',
-      description: 'Specialized water treatment system meeting strict food safety standards for beverage production.',
-      client: 'Premium Beverages Inc.',
-      location: 'California, USA',
-      date: '2022',
-      capacity: '3 million gallons/day',
-      features: ['Food-grade materials', 'CIP systems', 'Taste & odor removal', 'Microbiological safety']
-    },
-    {
-      id: 6,
-      title: 'School District Water Purifiers',
-      category: 'commercial',
-      image: 'https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=800',
-      description: 'Installation of water purification systems across 25 schools serving 15,000 students.',
-      client: 'Metro School District',
-      location: 'Denver, USA',
-      date: '2021',
-      capacity: '100,000 gallons/day',
-      features: ['Lead removal', 'Chlorine reduction', 'Maintenance program', 'Safety compliance']
-    }
-  ];
+const projects = [
+  {
+    id: 1,
+    title: 'STP - Irrigation & Public Health',
+    category: 'municipal',
+    image: '/images/placeholder.jpg',
+    description: 'Sewage Treatment Plant for public health and sanitation improvement.',
+    client: 'Irrigation & Public Health',
+    location: 'Dharamshala',
+    date: 'Ongoing',
+    capacity: '2.5 MLD',
+    features: ['Sewage treatment', 'Public sector', 'Municipal utility']
+  },
+  {
+    id: 2,
+    title: 'STP - Irrigation & Public Health',
+    category: 'municipal',
+    image: '/images/placeholder.jpg',
+    description: 'Medium capacity STP project in Himachal Pradesh.',
+    client: 'Irrigation & Public Health',
+    location: 'Hamirpur (HP)',
+    date: 'Ongoing',
+    capacity: '600 KLD',
+    features: ['Municipal STP', 'Medium scale', 'Public health']
+  },
+  {
+    id: 3,
+    title: 'STP - Cantonment Board',
+    category: 'municipal',
+    image: '/images/placeholder.jpg',
+    description: 'Sewage treatment plant for defense residential area.',
+    client: 'Cantonment Board',
+    location: 'Meerut',
+    date: 'Ongoing',
+    capacity: '700 KLD',
+    features: ['Defense housing', 'Sewage purification', 'Effluent processing']
+  },
+  {
+    id: 4,
+    title: 'ETP - Nagar Nigam',
+    category: 'municipal',
+    image: '/images/placeholder.jpg',
+    description: 'Effluent treatment plant handling large capacity waste.',
+    client: 'Nagar Nigam',
+    location: 'Aligarh',
+    date: 'Completed',
+    capacity: '800 KLD',
+    features: ['Effluent treatment', 'Urban waste', 'High capacity']
+  },
+  {
+    id: 5,
+    title: 'WTP - DAV Public School',
+    category: 'educational',
+    image: '/images/placeholder.jpg',
+    description: 'Water treatment system installed for school campuses.',
+    client: 'DAV Public School',
+    location: 'Noida',
+    date: 'Completed',
+    capacity: 'N/A',
+    features: ['Safe drinking water', 'Educational institute', 'Water purification']
+  },
+  {
+    id: 6,
+    title: 'WTP - Sahara India Financial Corporation',
+    category: 'corporate',
+    image: '/images/placeholder.jpg',
+    description: 'Water treatment project for large financial corporation.',
+    client: 'Sahara India Financial Corporation',
+    location: 'Noida',
+    date: 'Completed',
+    capacity: 'N/A',
+    features: ['Corporate utility', 'Clean water supply', 'Office water needs']
+  },
+  {
+    id: 7,
+    title: 'WTP - Shanti Gopal Hospital',
+    category: 'commercial',
+    image: '/images/placeholder.jpg',
+    description: 'Purification system for medical-grade water usage.',
+    client: 'Shanti Gopal Hospital',
+    location: 'Indirapuram, Ghaziabad',
+    date: 'Completed',
+    capacity: 'N/A',
+    features: ['Medical standards', 'Ultra-pure water', 'Hospital compliance']
+  },
+  {
+    id: 8,
+    title: 'WTP - Ashok Memorial Public School',
+    category: 'educational',
+    image: '/images/placeholder.jpg',
+    description: 'Water treatment plant installed for academic safety.',
+    client: 'Ashok Memorial Public School',
+    location: 'Faridabad',
+    date: 'Completed',
+    capacity: 'N/A',
+    features: ['School safety', 'Clean water', 'Drinking water solution']
+  },
+  {
+    id: 9,
+    title: 'Water Distribution - UP Irrigation Department',
+    category: 'municipal',
+    image: '/images/placeholder.jpg',
+    description: '5km pumping and water distribution network for irrigation.',
+    client: 'UP Irrigation Department',
+    location: 'Mahoba',
+    date: 'Completed',
+    capacity: 'N/A',
+    features: ['Water network', 'Agriculture support', 'State infrastructure']
+  }
+];
+
 
   const categories = [
     { id: 'all', name: 'All Projects' },
@@ -112,9 +150,9 @@ const PreviousWorks = () => {
           }}
         ></div>
         <div className="relative px-4 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
-          <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
+          <Header>
             Previous Works
-          </h1>
+          </Header>
           <p className="max-w-3xl mx-auto text-xl leading-relaxed text-blue-100 md:text-2xl">
             Explore our portfolio of successful water treatment projects across 
             municipal, industrial, commercial, and residential sectors.

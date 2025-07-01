@@ -7,7 +7,7 @@ interface ButtonProps {
   type?: 'button' | 'submit' | 'reset';
   variant?: 'primary' | 'secondary' | 'outline';
   size?: 'sm' | 'md' | 'lg';
-  icon?: LucideIcon;
+  icon?: typeof LucideIcon;
   iconPosition?: 'left' | 'right';
   disabled?: boolean;
   className?: string;
@@ -47,9 +47,9 @@ const Button: React.FC<ButtonProps> = ({
       disabled={disabled}
       className={classes}
     >
-      {Icon && iconPosition === 'left' && <Icon className="mr-2 h-4 w-4" />}
+      {Icon && iconPosition === 'left' && <Icon className="w-4 h-4 mr-2" />}
       {children}
-      {Icon && iconPosition === 'right' && <Icon className="ml-2 h-4 w-4" />}
+      {Icon && iconPosition === 'right' && <Icon className="w-4 h-4 ml-2" />}
     </button>
   );
 };
