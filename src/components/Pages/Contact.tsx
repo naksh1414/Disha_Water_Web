@@ -87,7 +87,7 @@ const Contact = () => {
       icon: MapPin,
       title: "Office",
       details: [
-        "A – 4/5, Sector – 88, Phase – II",
+        "A – 4/5, Sector – 80, Phase – II",
         "Noida – 201305 (U.P.) (INDIA)",
       ],
       description: "Monday - Friday: 8AM - 6PM",

@@ -1,36 +1,195 @@
-import { CheckCircle, Settings, Wrench, Shield, Zap } from "lucide-react";
+import {
+  Wrench,
+  Activity,
+  FileCode,
+  ShoppingCart,
+  Building2,
+  PackageCheck,
+  Eye,
+  Briefcase,
+  Hammer,
+  Cpu,
+  Rocket,
+  LifeBuoy,
+  FileText,
+  SearchCheck,
+  FlaskConical,
+  PenTool,
+  ScanSearch,
+  LayoutDashboard,
+  ShieldCheck,
+  Construction,
+  RefreshCw,
+  FileCog,
+  Settings,
+  Users,
+  ArchiveRestore,
+  Leaf,
+  Shield,
+  Zap,
+} from "lucide-react";
+
 import Card from "../Common/Card";
 import Button from "../Common/Button";
 import { Link } from "react-router-dom";
 import Header from "../Common/Header";
 const Services = () => {
   const mainServices = [
-    "Mechanical Design",
-    "Electricity & Instrumentation Design",
-    "Basic / Detailed Engineering",
-    "Procurement",
-    "BOT (O) Projects",
-    "Equipment Supply",
-    "Site Supervision",
-    "General Contracting",
-    "Construction & Erection",
-    "Electricity, Instrumentation & Control",
-    "Start-up & Commissioning",
-    "Operation & Maintenance",
-    "Project Development",
-    "Water Management Surveys",
-    "R&D, Treatability & Pilot Plant Studies",
-    "Design & Engineering",
-    "Plant & Process Audits",
-    "Project Management",
-    "Inspection",
-    "Erection & Commissioning",
-    "Upgradation & Automation of Plant",
-    "O&M Contracts",
-    "Build-Own-Operate-Maintain/Transfer (BOO/T) Projects",
-    "Operator Training",
-    "Supply of Fabricated Components",
-    "Environmental Management Systems & ISO 14000 Consultancy",
+    {
+      title: "Mechanical Design",
+      description:
+        "Custom mechanical solutions for treatment plants, ensuring durability and ease of maintenance.",
+      icon: Wrench,
+    },
+    {
+      title: "Electricity & Instrumentation Design",
+      description:
+        "Complete electrical layout and automation system design tailored for efficient plant operations.",
+      icon: Activity,
+    },
+    {
+      title: "Basic / Detailed Engineering",
+      description:
+        "From initial concept to full-scale execution with accurate drawings and technical specs.",
+      icon: FileCode,
+    },
+    {
+      title: "Procurement",
+      description:
+        "Reliable sourcing of quality components and equipment from trusted manufacturers.",
+      icon: ShoppingCart,
+    },
+    {
+      title: "BOT (O) Projects",
+      description:
+        "Build-Operate-Transfer projects for infrastructure development and management.",
+      icon: Building2,
+    },
+    {
+      title: "Equipment Supply",
+      description:
+        "Manufacture and supply of reliable water treatment components.",
+      icon: PackageCheck,
+    },
+    {
+      title: "Site Supervision",
+      description:
+        "Professional monitoring for installation and commissioning of treatment plants.",
+      icon: Eye,
+    },
+    {
+      title: "General Contracting",
+      description:
+        "Comprehensive turnkey solutions for civil, mechanical, and electrical works.",
+      icon: Briefcase,
+    },
+    {
+      title: "Construction & Erection",
+      description:
+        "Execution of infrastructure and system erection as per project specifications.",
+      icon: Hammer,
+    },
+    {
+      title: "Electricity, Instrumentation & Control",
+      description:
+        "Automation systems using PLC/SCADA with real-time data monitoring.",
+      icon: Cpu,
+    },
+    {
+      title: "Start-up & Commissioning",
+      description:
+        "Testing and fine-tuning of water systems for optimal performance.",
+      icon: Rocket,
+    },
+    {
+      title: "Operation & Maintenance",
+      description:
+        "Long-term system operation contracts ensuring performance and compliance.",
+      icon: LifeBuoy,
+    },
+    {
+      title: "Project Development",
+      description:
+        "Feasibility studies and technical planning from design to deployment.",
+      icon: FileText,
+    },
+    {
+      title: "Water Management Surveys",
+      description:
+        "Comprehensive analysis of water sources, usage, and conservation strategies.",
+      icon: SearchCheck,
+    },
+    {
+      title: "R&D, Treatability & Pilot Plant Studies",
+      description:
+        "Pilot-scale testing to validate and optimize treatment processes.",
+      icon: FlaskConical,
+    },
+    {
+      title: "Design & Engineering",
+      description:
+        "Precise system layout considering site constraints and requirements.",
+      icon: PenTool,
+    },
+    {
+      title: "Plant & Process Audits",
+      description:
+        "Detailed inspections to assess system efficiency and compliance.",
+      icon: ScanSearch,
+    },
+    {
+      title: "Project Management",
+      description:
+        "Coordinated delivery of engineering projects on-time and within budget.",
+      icon: LayoutDashboard,
+    },
+    {
+      title: "Inspection",
+      description:
+        "Thorough examination and testing for quality and safety standards.",
+      icon: ShieldCheck,
+    },
+    {
+      title: "Erection & Commissioning",
+      description:
+        "Installation, integration, and commissioning of treatment equipment.",
+      icon: Construction,
+    },
+    {
+      title: "Upgradation & Automation of Plant",
+      description:
+        "Modernizing systems with automation and energy-efficient technologies.",
+      icon: RefreshCw,
+    },
+    {
+      title: "O&M Contracts",
+      description:
+        "Maintenance and service-level agreements for plant performance.",
+      icon: FileCog,
+    },
+    {
+      title: "Build-Own-Operate-Maintain/Transfer (BOO/T) Projects",
+      description:
+        "Sustainable infrastructure models under long-term private management.",
+      icon: Settings,
+    },
+    {
+      title: "Operator Training",
+      description: "Skill development programs for plant operators and staff.",
+      icon: Users,
+    },
+    {
+      title: "Supply of Fabricated Components",
+      description:
+        "Manufacture and delivery of custom-built mechanical components.",
+      icon: ArchiveRestore,
+    },
+    {
+      title: "Environmental Management Systems & ISO 14000 Consultancy",
+      description:
+        "Support for achieving ISO 14000 certification and EMS best practices.",
+      icon: Leaf,
+    },
   ];
 
   const additionalServices = [
@@ -103,12 +262,15 @@ const Services = () => {
               <Card
                 key={index}
                 hover
-                className="flex items-center p-4 space-x-4"
+                className="flex flex-col justify-between h-full p-6 text-center transition bg-white border border-gray-200 shadow-sm rounded-xl hover:shadow-md"
               >
-                <CheckCircle className="text-green-500" />
-                <span className="text-sm font-medium text-gray-800">
-                  {service}
-                </span>
+                <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-blue-600 to-teal-600">
+                  <service.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="mb-2 text-lg font-semibold text-blue-700">
+                  {service.title}
+                </h3>
+                <p className="text-sm text-gray-600">{service.description}</p>
               </Card>
             ))}
           </div>
@@ -116,7 +278,7 @@ const Services = () => {
       </section>
 
       {/* Additional Services */}
-      <section className="py-16 lg:py-24 bg-gray-50">
+      <section className="py-16 lg:py-20 bg-gray-50">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
@@ -146,7 +308,7 @@ const Services = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-16 lg:py-24">
+      <section className="py-16 lg:py-20">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
